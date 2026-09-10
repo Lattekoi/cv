@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LIAITONG — 交互式简历</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="avatar">
+        <div class="avatar-placeholder">L</div>
+      </div>
+      <h1 class="name">LIAITONG</h1>
+      <p class="tagline">性别：女</p>
+
+      <div class="contact">
+        <h3>联系方式</h3>
+        <p><strong>邮箱</strong><br /><a href="mailto:1393936894@qq.com">1393936894@qq.com</a></p>
+        <p><strong>网站 / 链接</strong><br /><a href="#" id="portfolioLink">（请填入你的个人网站）</a></p>
+        <div class="actions">
+          <button id="downloadVCard">下载 vCard</button>
+          <button id="printCV">打印 / 保存为 PDF</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label class="switch">
+          <input id="themeToggle" type="checkbox" />
+          <span>深色主题</span>
+        </label>
+        <label class="switch">
+          <input id="langToggle" type="checkbox" />
+          <span>English</span>
+        </label>
+      </div>
+
+      <div class="quick-links">
+        <h3>快速导航</h3>
+        <nav>
+          <a href="#summary">简介</a>
+          <a href="#education">教育</a>
+          <a href="#experience">工作经历</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#contact">联络</a>
+        </nav>
+      </div>
+
+      <footer class="sidebar-footer">
+        <small>模板可自定义 — 由交互式简历生成</small>
+      </footer>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <h2 id="pageTitle">交互式简历</h2>
+        <div class="header-controls">
+          <input id="searchInput" placeholder="搜索关键字（如：React / 数据分析）" />
+        </div>
+      </header>
+
+      <section id="summary" class="card">
+        <h3 class="card-title">简介</h3>
+        <div class="card-body">
+          <p id="summaryText">你好，我是 LIAITONG。欢迎查看我的交互式简历。这里展示教育、实习/工作经历、技能和项目。可切换语言、打印或导出 vCard。</p>
+        </div>
+      </section>
+
+      <section id="education" class="card">
+        <h3 class="card-title">教育背景</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">2021.09 — 2025.06</div>
+            <div class="content">
+              <h4>（请填写学校 / 专业）</h4>
+              <p>示例：本科 / 专业名称。将此处替换为你简历中的真实教育信息。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="card">
+        <h3 class="card-title">实践经验</h3>
+        <div class="timeline" id="experienceList">
+          <div class="timeline-item">
+            <div class="time">2021.10 — 2025.04</div>
+            <div class="content">
+              <h4>（请填写公司 / 职位）</h4>
+              <p>描述你的职责与成果。你也可以点击“添加经历”按钮在页面中新增条目（编辑源代码或告诉我，我代为添加）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button id="addExperience">添加经历</button>
+        </div>
+      </section>
+
+      <section id="skills" class="card">
+        <h3 class="card-title">技能</h3>
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill">
+            <h5>HTML/CSS</h5>
+            <div class="bar"><div class="progress" data-level="90"></div></div>
+          </div>
+          <div class="skill">
+            <h5>JavaScript</h5>
+            <div class="bar"><div class="progress" data-level="75"></div></div>
+          </div>
+          <div class="skill">
+            <h5>英语 (IELTS 6.5)</h5>
+            <div class="bar"><div class="progress" data-level="65"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="card">
+        <h3 class="card-title">项目</h3>
+        <div class="projects" id="projectsList">
+          <article class="project-card">
+            <h4>示例项目：交互式简历网页</h4>
+            <p>一个响应式、可打印并支持主题切换的简历网页。</p>
+            <div class="project-actions">
+              <button class="openProject">查看详情</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3 class="card-title">联络我</h3>
+        <div class="card-body">
+          <form id="contactForm">
+            <label>你的姓名<input name="name" required /></label>
+            <label>邮箱<input name="email" type="email" required /></label>
+            <label>信息<textarea name="message" rows="4" required></textarea></label>
+            <div class="form-actions">
+              <button type="submit">发送（本地模拟）</button>
+            </div>
+            <p class="hint">此表单不真正发送邮件；可接入你自己的后端或使用 Formspree / Netlify Forms。</p>
+          </form>
+        </div>
+      </section>
+
+      <div id="projectModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" id="modalClose">&times;</button>
+          <h3 id="modalTitle">项目详情</h3>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
