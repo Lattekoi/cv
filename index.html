@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LIAITONG — 交互式简历</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="clay-details.css" />
+  <link rel="stylesheet" href="blue-pink.css" />
+  <link rel="stylesheet" href="tech-luxe.css" />
+  <link rel="stylesheet" href="creative-lab.css" />
+  <link rel="stylesheet" href="design-lab.css" />
+  <link rel="stylesheet" href="creative-wow.css" />
+  <link rel="stylesheet" href="hero-premium.css" />
+  <link rel="stylesheet" href="section-markers.css" />
 </head>
 <body>
   <div class="app">
@@ -13,12 +22,14 @@
         <div class="avatar-placeholder">L</div>
       </div>
       <h1 class="name">LIAITONG</h1>
-      <p class="tagline">性别：女</p>
+      <p class="tagline">工业设计 · 艺术科技与商业<br />把设计落到真实世界里。</p>
 
       <div class="contact">
-        <h3>联系方式</h3>
+        <h3>Get in touch</h3>
         <p><strong>邮箱</strong><br /><a href="mailto:1393936894@qq.com">1393936894@qq.com</a></p>
-        <p><strong>网站 / 链接</strong><br /><a href="#" id="portfolioLink">（请填入你的个人网站）</a></p>
+        <p><strong>电话</strong><br /><a href="tel:18009486019">180 0948 6019</a></p>
+        <p><strong>所在地</strong><br />甘肃省兰州市</p>
+        <p><strong>微信</strong><br />lat031016</p>
         <div class="actions">
           <button id="downloadVCard">下载 vCard</button>
           <button id="printCV">打印 / 保存为 PDF</button>
@@ -37,13 +48,14 @@
       </div>
 
       <div class="quick-links">
-        <h3>快速导航</h3>
+        <h3>Explore</h3>
         <nav>
           <a href="#summary">简介</a>
           <a href="#education">教育</a>
           <a href="#experience">工作经历</a>
           <a href="#skills">技能</a>
-          <a href="#projects">项目</a>
+          <a href="#honors">荣誉</a>
+          <a href="#evaluation">自我评价</a>
           <a href="#contact">联络</a>
         </nav>
       </div>
@@ -55,27 +67,66 @@
 
     <main class="main">
       <header class="main-header">
-        <h2 id="pageTitle">交互式简历</h2>
+        <h2 id="pageTitle">个人履历 / 2026</h2>
         <div class="header-controls">
           <input id="searchInput" placeholder="搜索关键字（如：React / 数据分析）" />
         </div>
       </header>
 
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="hero-kicker">● available for new adventures</span>
+          <h1>你好，我是<br /><em>LIAITONG.</em></h1>
+          <p id="heroLine">在材料、媒介与商业之间，寻找下一种设计可能。</p>
+          <div class="hero-signal"><span></span><b id="heroSignal">DESIGNING BETWEEN WORLDS</b></div>
+        </div>
+        <div class="clay-orbit design-constellation">
+          <div class="constellation-ring ring-one"></div><div class="constellation-ring ring-two"></div>
+          <button class="star-node node-cmf active" data-focus="cmf" aria-label="查看工业设计方向"><span>CMF</span><small>材料</small></button>
+          <button class="star-node node-art" data-focus="art" aria-label="查看艺术科技方向"><span>ART</span><small>媒介</small></button>
+          <button class="star-node node-biz" data-focus="biz" aria-label="查看商业思维方向"><span>BIZ</span><small>价值</small></button>
+          <div class="clay-shape">✦</div>
+        </div>
+      </section>
+
       <section id="summary" class="card">
         <h3 class="card-title">简介</h3>
         <div class="card-body">
-          <p id="summaryText">你好，我是 LIAITONG。欢迎查看我的交互式简历。这里展示教育、实习/工作经历、技能和项目。可切换语言、打印或导出 vCard。</p>
+          <p id="summaryText">我相信好的体验不只是“看起来漂亮”，更应该让人感到轻松、清晰和被理解。过去的学习与实践中，我持续训练从用户需求出发拆解问题，并用原型、视觉设计和前端实现把想法落地。<br /><br />目前希望在产品设计、交互设计或前端开发方向继续深耕，和一群认真又有趣的人，一起做值得被使用的东西。</p>
         </div>
+      </section>
+
+      <section id="design-lab" class="card design-lab">
+        <div class="lab-heading">
+          <div><span class="lab-code">LAB 01 · DESIGN DNA</span><h3 class="card-title">设计工作台</h3></div>
+          <span class="lab-status"><i></i> exploring</span>
+        </div>
+        <p class="lab-intro">我的设计方法在三个方向之间流动：从材料触感出发，用技术放大体验，再用商业视角判断它是否值得被实现。</p>
+        <div class="lab-tabs" role="tablist" aria-label="设计方向">
+          <button class="lab-tab active" data-lab="industrial" role="tab">工业设计</button>
+          <button class="lab-tab" data-lab="art-tech" role="tab">艺术科技</button>
+          <button class="lab-tab" data-lab="business" role="tab">商业思维</button>
+        </div>
+        <div class="lab-panel active" data-panel="industrial"><div class="material-orbit"><span class="material m1">CMF</span><span class="material m2">FORM</span><span class="material m3">SPACE</span><div class="material-core">触感<br /><b>01</b></div></div><div><span class="panel-label">MATERIAL / FORM / FUNCTION</span><h4>让物件先被感受到</h4><p>关注材料、色彩、形态与人体使用之间的关系。通过草图、Rhino、KeyShot 和 CMF 调研，把抽象想法推进到可被看见、触摸和制造的方案。</p><div class="mini-tags"><span>CMF</span><span>材料调研</span><span>产品落地</span></div></div></div>
+        <div class="lab-panel" data-panel="art-tech"><div class="signal-visual"><span></span><span></span><span></span><b>∞</b></div><div><span class="panel-label">MEDIA / INTERACTION / FUTURE</span><h4>让技术拥有情绪</h4><p>在艺术科技的学习中探索空间、数字媒介与人的关系，让技术不止于功能，也成为叙事、连接和感知的一部分。</p><div class="mini-tags"><span>艺术科技</span><span>交互体验</span><span>数字媒介</span></div></div></div>
+        <div class="lab-panel" data-panel="business"><div class="value-stack"><i>NEED</i><i>IDEA</i><i>VALUE</i></div><div><span class="panel-label">INSIGHT / STRATEGY / VALUE</span><h4>让好设计走得更远</h4><p>结合市场调研、设计管理与商业学习，关注用户需要什么、组织如何交付，以及一个设计如何在真实场景中持续创造价值。</p><div class="mini-tags"><span>市场调研</span><span>设计管理</span><span>商业表达</span></div></div></div>
       </section>
 
       <section id="education" class="card">
         <h3 class="card-title">教育背景</h3>
         <div class="timeline">
           <div class="timeline-item">
+            <div class="time">2026.08 — 至今</div>
+            <div class="content">
+              <h4>香港岭南大学 · 商学院艺术科技与商业专业 · 硕士</h4>
+              <p>现就读艺术科技与商业专业，持续探索设计、技术与商业之间的连接。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
             <div class="time">2021.09 — 2025.06</div>
             <div class="content">
-              <h4>（请填写学校 / 专业）</h4>
-              <p>示例：本科 / 专业名称。将此处替换为你简历中的真实教育信息。</p>
+              <h4>天津职业技术师范大学 · 机械学院工业设计专业 · 本科</h4>
+              <p>主修工业设计概论、计算机辅助设计、CMF、市场营销、表现技法、设计色彩、设计心理学、设计管理、市场调研分析与预测、展示与环境设计、绿色设计等。</p>
             </div>
           </div>
         </div>
@@ -87,13 +138,41 @@
           <div class="timeline-item">
             <div class="time">2021.10 — 2025.04</div>
             <div class="content">
-              <h4>（请填写公司 / 职位）</h4>
-              <p>描述你的职责与成果。你也可以点击“添加经历”按钮在页面中新增条目（编辑源代码或告诉我，我代为添加）。</p>
+              <h4>校内实践 · 工业2101班班长 / 院学生会文体部干事</h4>
+              <p><strong>团队管理：</strong>制定班级工作计划，拆解任务并分工落地，保障各项事务高效运转。<br /><strong>活动统筹：</strong>多次牵头院内活动，单场覆盖全院超 100 人，协调师生资源达成目标。<br /><strong>设计实践：</strong>参加大学生民族文创设计大赛、清华 × 安踏全球运动装备创新设计大赛；设计作品被校劳动教育综合情景工坊收藏。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">2025 · 6个月</div>
+            <div class="content">
+              <h4>杭州英冠索菲特酒店 · 多部门轮岗实习生</h4>
+              <p>完成六个月多部门轮岗，系统了解高端酒店运营体系与跨部门服务协作流程；在宾客服务、多任务并行和突发情况处理中，持续锻炼客户服务意识、沟通能力与抗压能力，综合表现获各部门主管一致好评。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">实习经历</div>
+            <div class="content">
+              <h4>深圳市广田建筑装饰设计研究院 · 设计实习生</h4>
+              <p>参与装饰设计项目辅助工作，协助方案草图绘制与材料 CMF 调研，深化空间美学与落地表达能力。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">校企合作</div>
+            <div class="content">
+              <h4>天津博盛睿创科技发展有限公司 · 校企合作实习生</h4>
+              <p>随校参与企业实习，了解产品制造与研发流程，建立从设计到量产的系统认知。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">2024.04</div>
+            <div class="content">
+              <h4>天津东晟翼虎培训学校 · 街舞课程代课教师</h4>
+              <p>独立带练街舞课程并指导学员，锻炼表达沟通、现场组织与临场应变能力。</p>
             </div>
           </div>
         </div>
         <div class="card-actions">
-          <button id="addExperience">添加经历</button>
+          <button id="addExperience">＋ 添加一段经历</button>
         </div>
       </section>
 
@@ -101,29 +180,62 @@
         <h3 class="card-title">技能</h3>
         <div class="skills-grid" id="skillsGrid">
           <div class="skill">
-            <h5>HTML/CSS</h5>
-            <div class="bar"><div class="progress" data-level="90"></div></div>
+            <h5>工业设计 / CMF / 表现技法</h5>
+            <div class="bar"><div class="progress" data-level="90" style="--level:90%"></div></div>
           </div>
           <div class="skill">
-            <h5>JavaScript</h5>
-            <div class="bar"><div class="progress" data-level="75"></div></div>
+            <h5>数据与办公 · Excel / Word / PPT</h5>
+            <div class="bar"><div class="progress" data-level="88" style="--level:88%"></div></div>
           </div>
           <div class="skill">
-            <h5>英语 (IELTS 6.5)</h5>
-            <div class="bar"><div class="progress" data-level="65"></div></div>
+            <h5>Rhino / KeyShot · 计算机辅助设计</h5>
+            <div class="bar"><div class="progress" data-level="76" style="--level:76%"></div></div>
           </div>
+          <div class="skill">
+            <h5>市场调研 · 设计管理 · 空间展示</h5>
+            <div class="bar"><div class="progress" data-level="84" style="--level:84%"></div></div>
+          </div>
+        </div>
+        <p class="skill-note"><strong>语言与证书：</strong>CET-4 · IELTS 6.5 · 普通话二甲</p>
+      </section>
+
+      <section id="honors" class="card honor-card">
+        <h3 class="card-title">个人荣誉</h3>
+        <div class="honor-list">
+          <span>多次校二等奖学金</span><span>社工奖学金</span><span>优秀大学生</span><span>优秀学生干部</span><span>优秀毕业生</span><span>多次省运会金奖</span>
+        </div>
+      </section>
+
+      <section id="evaluation" class="card evaluation-card">
+        <h3 class="card-title">自我评价</h3>
+        <div class="evaluation-grid">
+          <p><strong>极富责任心、做事靠谱</strong><br />交付结果值得信赖，习惯把事情闭环到位。</p>
+          <p><strong>虚心好学、乐于尝试</strong><br />对新鲜事物保持好奇，主动拓展能力边界。</p>
+          <p><strong>上手能力强</strong><br />能快速适应新环境与跨领域任务，学习曲线短。</p>
+          <p><strong>综合素养</strong><br />性格开朗、沟通协作顺畅，兼具设计审美与商业思维，抗压能力突出。</p>
         </div>
       </section>
 
       <section id="projects" class="card">
         <h3 class="card-title">项目</h3>
+        <div class="project-filters" role="group" aria-label="项目筛选"><button class="project-filter active" data-filter="all">全部</button><button class="project-filter" data-filter="industrial">工业设计</button><button class="project-filter" data-filter="art-tech">艺术科技</button><button class="project-filter" data-filter="business">商业实践</button></div>
         <div class="projects" id="projectsList">
-          <article class="project-card">
-            <h4>示例项目：交互式简历网页</h4>
-            <p>一个响应式、可打印并支持主题切换的简历网页。</p>
+          <article class="project-card" data-type="art-tech">
+            <span class="project-meta">ART-TECH / 01</span><h4>一页式交互简历</h4>
+            <p>将个人信息、作品与联系方式组织成清晰的浏览路径，支持响应式阅读与打印导出。</p>
             <div class="project-actions">
               <button class="openProject">查看详情</button>
             </div>
+          </article>
+          <article class="project-card" data-type="industrial">
+            <span class="project-meta">INDUSTRIAL / 02</span><h4>CMF 材料实验档案</h4>
+            <p>围绕色彩、材料与表面处理建立视觉样本，探索材料语言如何影响产品的触感与情绪。</p>
+            <div class="project-actions"><button class="openProject">查看详情</button></div>
+          </article>
+          <article class="project-card" data-type="business">
+            <span class="project-meta">BUSINESS / 03</span><h4>从洞察到方案</h4>
+            <p>以市场调研和用户场景为起点，拆解需求、组织信息并形成可沟通、可落地的设计提案。</p>
+            <div class="project-actions"><button class="openProject">查看详情</button></div>
           </article>
         </div>
       </section>
