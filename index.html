@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="creative-wow.css" />
   <link rel="stylesheet" href="hero-premium.css" />
   <link rel="stylesheet" href="section-markers.css" />
+  <link rel="stylesheet" href="premium-palette.css" />
 </head>
 <body>
   <div class="app">
@@ -264,6 +265,25 @@
       </div>
     </main>
   </div>
+
+  <aside class="cat-pet" aria-label="互动桌宠">
+    <div class="cat-pet-panel" id="catPetPanel" aria-hidden="true">
+      <strong>lat 在这里</strong>
+      <p id="catPetMessage">今天也要把灵感落到真实世界里。</p>
+      <div class="cat-pet-actions">
+        <button type="button" data-pet-action="pet">摸摸</button>
+        <button type="button" data-pet-action="charge">充电</button>
+        <button type="button" data-pet-action="scout">巡航</button>
+      </div>
+    </div>
+    <button class="cat-pet-toggle" id="catPetToggle" type="button" aria-expanded="false" aria-controls="catPetPanel" aria-label="打开 lat 桌宠">
+      <span class="cat-pet-antenna"></span>
+      <span class="cat-pet-ear ear-left"></span><span class="cat-pet-ear ear-right"></span>
+      <span class="cat-pet-head"><i class="cat-eye eye-left"></i><i class="cat-eye eye-right"></i><i class="cat-nose"></i><i class="cat-mouth"></i></span>
+      <span class="cat-pet-body"><i class="cat-chest"></i><i class="cat-light"></i></span>
+      <span class="cat-pet-tail"></span>
+    </button>
+  </aside>
 
   <script src="script.js"></script>
 </body>
